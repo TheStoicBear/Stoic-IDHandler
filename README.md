@@ -1,11 +1,12 @@
-## Stoic-IDHandler 
+## NDFramework IDHandler User Documentation
 
+### Introduction
 
-## User Documentation
+NDFramework IDHandler is a user identification management system designed to handle authentication, authorization, and license management within FiveM. This system provides a robust and secure solution for managing user identities.
 
 ### Configuration
 
-To configure the Stoic-IDHandler system, follow these steps:
+To configure the NDFramework IDHandler system, follow these steps:
 
 1. Open the `Config.lua` file.
 2. Adjust the configuration parameters according to your application's requirements:
@@ -18,7 +19,7 @@ To configure the Stoic-IDHandler system, follow these steps:
 
 ### Usage
 
-The Stoic-IDHandler system consists of three main components: Client-side, Server-side, and Configuration.
+The NDFramework IDHandler system consists of three main components: Client-side, Server-side, and Configuration.
 
 #### Client-Side (Client.lua)
 
@@ -43,3 +44,28 @@ The configuration file defines various parameters used by the system, including:
 - Default notification settings.
 - Notification types and icons.
 - Department names for user permissions and commands.
+
+### Commands
+
+Here are the commands available for users:
+
+- **/revokedl [playerId]**: Revoke a driver's license for the specified player.
+- **/suspenddl [playerId]**: Suspend a driver's license for the specified player.
+- **/validdl [playerId]**: Mark a driver's license as valid for the specified player.
+
+### Details
+
+- **/revokedl [playerId]**:
+  - Command to revoke a driver's license for a specific player.
+  - Requires appropriate permissions based on department names defined in the configuration.
+  - Usage: `/revokedl [playerId]`
+
+- **/suspenddl [playerId]**:
+  - Command to suspend a driver's license for a specific player.
+  - Requires appropriate permissions based on department names defined in the configuration.
+  - Usage: `/suspenddl [playerId]`
+
+- **/validdl [playerId]**:
+  - Command to mark a driver's license as valid for a specific player.
+  - Requires appropriate permissions based on department names defined in the configuration.
+  - Usage: `/validdl [playerId]`

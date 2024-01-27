@@ -1,3 +1,7 @@
+
+![STOIC (7)](https://github.com/TheStoicBear/Stoic-IDHandler/assets/112611821/318291df-ee38-480c-b565-9459d946848e)
+
+
 ## Stoic IDHandler User Documentation
 
 ### Introduction

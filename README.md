@@ -6,7 +6,7 @@
 
 ### Introduction
 
-NDFramework IDHandler is a user identification management system designed to handle authentication, authorization, and license management within FiveM. This system provides a robust and secure solution for managing user identities.
+Stoic IDHandler is a user identification management system designed to handle authentication, authorization, and license management within FiveM. This system provides a robust and secure solution for managing user identities.
 
 ### Configuration
 

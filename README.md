@@ -1,4 +1,4 @@
-## NDFramework IDHandler User Documentation
+## Stoic IDHandler User Documentation
 
 ### Introduction
 

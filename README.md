@@ -2,9 +2,10 @@
 ![STOIC (7)](https://github.com/TheStoicBear/Stoic-IDHandler/assets/112611821/318291df-ee38-480c-b565-9459d946848e)
 
 <p align="center">
-  [Documentation Page](https://thestoic.gitbook.io/home/docs/stoic-idhander)
+  <a href="https://thestoic.gitbook.io/home/docs/stoic-idhander">Documentation Page</a>
 </p>
 ## Stoic IDHandler User Documentation
+
 
 ### Introduction
 

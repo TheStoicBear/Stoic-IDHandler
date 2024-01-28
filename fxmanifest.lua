@@ -18,5 +18,12 @@ shared_scripts {
     "config.lua"
 }
 
+exports {
+    "GetCoreObject"
+}
+
+server_exports {
+    "GetCoreObject"
+}
 
 dependency "oxmysql"

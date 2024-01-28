@@ -1,3 +1,6 @@
+-- Define your SDL core object
+SDL = {}
+
 -- Function to send notifications to client.lua
 function sendNotificationToClient(playerId, data)
     TriggerClientEvent('notification:display', playerId, data)
@@ -15,7 +18,7 @@ RegisterCommand("revokedl", function(source, args, rawCommand)
             if targetId then
                 local targetPlayer = NDCore.getPlayer(targetId)
                 if targetPlayer then
-                    revokeDriverLicense(targetPlayer)
+                    SDL.revokeDriverLicense(targetPlayer)
                 else
                     sendNotificationToClient(source, { type = "error", description = "Player with ID " .. targetId .. " not found." })
                 end
@@ -41,7 +44,7 @@ RegisterCommand("suspenddl", function(source, args, rawCommand)
             if targetId then
                 local targetPlayer = NDCore.getPlayer(targetId)
                 if targetPlayer then
-                    suspendDriverLicense(targetPlayer)
+                    SDL.suspendDriverLicense(targetPlayer)
                 else
                     sendNotificationToClient(source, { type = "error", description = "Player with ID " .. targetId .. " not found." })
                 end
@@ -67,7 +70,7 @@ RegisterCommand("validdl", function(source, args, rawCommand)
             if targetId then
                 local targetPlayer = NDCore.getPlayer(targetId)
                 if targetPlayer then
-                    validDriverLicense(targetPlayer)
+                    SDL.validDriverLicense(targetPlayer)
                 else
                     sendNotificationToClient(source, { type = "error", description = "Player with ID " .. targetId .. " not found." })
                 end
@@ -82,7 +85,7 @@ RegisterCommand("validdl", function(source, args, rawCommand)
 end, false)
 
 -- Function to revoke a driver's license
-function revokeDriverLicense(player)
+function SDL.revokeDriverLicense(player)
     local charid = player.getData('id')
     local updateQuery = "UPDATE nd_characters SET driverslicense = 'Revoked' WHERE charid = '" .. charid .. "'"
     MySQL.Async.execute(updateQuery, {}, function(rowsChanged)
@@ -96,7 +99,7 @@ function revokeDriverLicense(player)
 end
 
 -- Function to suspend a driver's license
-function suspendDriverLicense(player)
+function SDL.suspendDriverLicense(player)
     local charid = player.getData('id')
     local updateQuery = "UPDATE nd_characters SET driverslicense = 'Suspended' WHERE charid = '" .. charid .. "'"
     MySQL.Async.execute(updateQuery, {}, function(rowsChanged)
@@ -110,7 +113,7 @@ function suspendDriverLicense(player)
 end
 
 -- Function to mark a driver's license as valid
-function validDriverLicense(player)
+function SDL.validDriverLicense(player)
     local charid = player.getData('id')
     local updateQuery = "UPDATE nd_characters SET driverslicense = 'Valid' WHERE charid = '" .. charid .. "'"
     MySQL.Async.execute(updateQuery, {}, function(rowsChanged)
@@ -155,3 +158,8 @@ AddEventHandler('buyDriverLicense', function()
         end
     end
 end)
+
+-- Export the SDL core object
+function GetCoreObject()
+    return SDL
+end

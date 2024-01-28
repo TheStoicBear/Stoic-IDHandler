@@ -4,6 +4,9 @@
 <p align="center">
   <a href="https://thestoic.gitbook.io/home/docs/stoic-idhander">Documentation Page</a>
 </p>
+
+
+
 ## Stoic IDHandler User Documentation
 
 

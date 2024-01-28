@@ -1,0 +1,2 @@
+ALTER TABLE nd_characters
+ADD COLUMN driverslicense VARCHAR(255) DEFAULT NULL;

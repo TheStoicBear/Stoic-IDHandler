@@ -1,4 +1,8 @@
 
+# For Andy from NDFrammework
+# I did not make, I do not claim rights and it's Open Source.
+
+
 ![STOIC (7)](https://github.com/TheStoicBear/Stoic-IDHandler/assets/112611821/318291df-ee38-480c-b565-9459d946848e)
 
 <p align="center">
